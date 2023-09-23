@@ -5,6 +5,9 @@ module.exports = {
     ],
     theme: {
         extend: {},
+        height: {
+            '100-dvh': '100dvh'
+          }
     },
     plugins: [],
 }
