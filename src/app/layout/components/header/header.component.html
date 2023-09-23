@@ -8,14 +8,14 @@
                 E
             </div>
 
-            <h2 class="font-bold text-lg text-white">Ehsan <span class="font-medium">Shahrestani</span></h2>
+            <h2 class="font-bold hidden md:block text-lg text-white">Ehsan <span class="font-medium">Shahrestani</span></h2>
 
         </div>
 
         <div>
             <nav class=" p-4">
                 <ul class="flex space-x-4">
-                    <li *ngFor="let item of headerMenu"><a [routerLink]="[item.route]" routerLinkActive="activeLink"  class="text-gray-400 hover:text-white duration-75 ">{{item.lable}}</a></li>
+                    <li *ngFor="let item of headerMenu"><a [routerLink]="[item.route]" routerLinkActive="activeLink"  class="text-gray-400 hover:text-white duration-300 transition-all ">{{item.lable}}</a></li>
                 </ul>
             </nav>
 

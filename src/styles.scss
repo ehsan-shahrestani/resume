@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 @import 'https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i';
-
+@import 'assets/css/fonts/linecons/style.css';
 
 html {
     position: relative;
@@ -30,3 +30,76 @@ body {
     overflow-y: auto;
     overflow-x: hidden
 }
+
+
+.btn-primary,
+.btn-secondary,
+button,
+input[type=button],
+input[type=submit],
+.wp-block-button .wp-block-button__link {
+    display: inline-block;
+    position: relative;
+    padding: .8em 2.1em;
+    margin-bottom: .75em;
+    margin-right: .25em;
+    font-size: 1em;
+    line-height: 1.2;
+    border: 0;
+    outline: 0;
+    border: 2px solid #007ced;
+    color: #fff;
+    text-shadow: none;
+    background-color: #333;
+    border-radius: 30px;
+    font-family: poppins, Helvetica, sans-serif;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    box-shadow: 0 10px 10px -8px rgba(0, 0, 0, .78)
+}
+
+.btn-primary:last-child,
+.btn-secondary:last-child,
+button:last-child,
+input[type=button]:last-child,
+input[type=submit]:last-child,
+.wp-block-button .wp-block-button__link:last-child {
+    margin-right: 0
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+button:hover,
+button:focus,
+input[type=button]:hover,
+input[type=button]:focus,
+input[type=submit]:hover,
+input[type=submit]:focus {
+    background-color: #007ced;
+    color: #fff;
+    border: 2px solid #007ced
+}
+
+.btn-secondary {
+    border-color: #d5d5d5;
+    color: #fff;
+    background-color: #333;
+    box-shadow: 0 10px 10px -8px rgba(0, 0, 0, .78)
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    color: #333;
+    border-color: #d5d5d5;
+    background-color: #d5d5d5
+}
+
+
+.header-line{
+    @apply before:absolute before:bottom-0 before:bg-zinc-950
+    before:w-full before:h-[2px] before:block before:content-[''] after:w-1/3 after:bg-blue-500 after:absolute after:bottom-0 after:block after:h-[2px]
+}
+

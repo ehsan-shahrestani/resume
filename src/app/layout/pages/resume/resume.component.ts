@@ -9,5 +9,16 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./resume.component.scss']
 })
 export class ResumeComponent {
-
+skills =[
+  'Html/Css',
+  'Angular',
+  'TypeScript',
+  'JavaScript',
+  'Oop',
+  'Ngrx',
+  'Tailwind Css',
+  'Prime Ng',
+  'Angular Material',
+  'Rxjs'
+]
 }
