@@ -9,5 +9,8 @@ module.exports = {
             '100-dvh': '100dvh'
           }
     },
-    plugins: [],
+    plugins: [
+        require('tailwindcss-animated')
+
+    ],
 }
