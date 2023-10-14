@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-blog',
@@ -9,5 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent {
-
+  constructor(private title :Title){
+    this.title.setTitle('Ehsan | Blog')
+  }
 }

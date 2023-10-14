@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-resume',
@@ -9,6 +10,11 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./resume.component.scss']
 })
 export class ResumeComponent {
+
+constructor(private title :Title){
+  this.title.setTitle('Ehsan | Resume')
+}
+
 skills =[
   'Html/Css',
   'Angular',

@@ -4,9 +4,11 @@
 @tailwind utilities;
 @import 'https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i';
 @import 'assets/css/fonts/linecons/style.css';
+@import 'ngx-toastr/toastr';
 
 html {
- 
+    // cursor: url('assets/cursor.png'),auto;
+
 }
 
 body {
@@ -19,7 +21,6 @@ body {
 
 .btn-primary,
 .btn-secondary,
-button,
 input[type=button],
 input[type=submit],
 .wp-block-button .wp-block-button__link {
@@ -48,7 +49,7 @@ input[type=submit],
 
 .btn-primary:last-child,
 .btn-secondary:last-child,
-button:last-child,
+// button:last-child,
 input[type=button]:last-child,
 input[type=submit]:last-child,
 .wp-block-button .wp-block-button__link:last-child {
@@ -57,8 +58,8 @@ input[type=submit]:last-child,
 
 .btn-primary:hover,
 .btn-primary:focus,
-button:hover,
-button:focus,
+// button:hover,
+// button:focus,
 input[type=button]:hover,
 input[type=button]:focus,
 input[type=submit]:hover,
