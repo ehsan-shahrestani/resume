@@ -1,9 +1,9 @@
-<div style="background-image: url(assets/img/main_bg.png);background-size: cover;"  class="md:flex w-full md:items-center h-100-dvh">
+<div style="background-image: url(assets/img/main_bg.png);background-size: cover;"  class="md:flex w-full md:items-center min-h-full md:h-100-dvh">
 
     <div
-        class="h-full  bg-gray-500 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 border border-gray-100
-        md:overflow-hidden animate-jump-in animate-duration-300 flex  flex-col min-h-full md:min-h-max  md:h-[90%] py-3 px-2 md:p-20 w-full md:max-w-[1240px]    mx-auto md:rounded-[40px] ">
-        <app-header></app-header>
+        class="h-full  bg-gray-500 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 md:border md:border-gray-100
+        md:overflow-hidden animate-jump-in animate-duration-300 flex  flex-col min-h-full md:min-h-max   md:h-[90%] py-3 px-2 md:p-20 w-full md:max-w-[1240px]    mx-auto md:rounded-[40px] ">
+        <app-header class="sticky top-0 left-0"></app-header>
         <div [@routeAnimations]="getRouteAnimationData()" class="my-20 flex-1">
             <router-outlet></router-outlet>
         </div>
