@@ -11,6 +11,6 @@ import { Title } from '@angular/platform-browser';
 })
 export class BlogComponent {
   constructor(private title :Title){
-    this.title.setTitle('Ehsan | Blog')
+    this.title.setTitle('Ehsan Sahrestani | Blog')
   }
 }

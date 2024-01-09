@@ -22,7 +22,7 @@ export class ContactComponent {
   sendEmailLoading = false
 
   constructor(private title: Title, private fb: FormBuilder ,private toastr: ToastrService) {
-    this.title.setTitle('Ehsan | Contact')
+    this.title.setTitle('Ehsan Sahrestani | Contact')
 
   }
 

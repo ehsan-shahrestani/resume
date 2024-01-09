@@ -12,7 +12,7 @@ import { Title } from '@angular/platform-browser';
 export class ResumeComponent {
 
 constructor(private title :Title){
-  this.title.setTitle('Ehsan | Resume')
+  this.title.setTitle('Ehsan Sahrestani | Resume')
 }
 
 skills =[
