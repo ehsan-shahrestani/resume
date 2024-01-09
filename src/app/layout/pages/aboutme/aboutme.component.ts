@@ -19,6 +19,5 @@ export class AboutmeComponent {
     link.download ="Ehsan_cv.pdf";
     link.href ='assets/Ali-Safari-Resume.pdf';
     link.click();
-    window.open('Ehsan_cv.pdf')
   }
 }

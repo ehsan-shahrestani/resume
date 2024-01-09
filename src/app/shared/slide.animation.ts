@@ -43,10 +43,9 @@ export const fadeInOutAnimation = trigger('routeAnimations', [
     query(':enter, :leave', [
       style({
         position: 'absolute',
-        top: '0', // Set the initial top position for the entering page
         left: '0',
         width: '100%',
-        opacity: 1,
+        opacity: 0,
       }),
     ]),
     query(':enter', [style({ opacity: 0 })], { optional: true }),
@@ -65,3 +64,4 @@ export const fadeInOutAnimation = trigger('routeAnimations', [
     ]),
   ]),
 ]);
+

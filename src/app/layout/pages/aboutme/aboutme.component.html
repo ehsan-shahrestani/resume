@@ -1,40 +1,37 @@
- 
- <section class="flex justify-center h-full animate-jump items-center"> 
-    <div class=" w-11/12 md:w-9/12 grid grid-cols-1 md:grid-cols-2   items-center justify-center mx-auto">
-
-        <div class=" col-span-1 ">
-    
-            <div class="w-4/6 mx-auto">
-                <div class="home-photo ">
-                    <div class="hp-inner" style="background-image: url(assets/img/resume-img.jpg);">
-                    </div>
-                </div>
-            </div>
-    
-    
+<section class="md:mt-20 h-full animate-fade-down">
+  <div
+    class="w-11/12 md:w-9/12 grid grid-cols-1 md:grid-cols-2 items-center justify-center mx-auto"
+  >
+    <div class="col-span-1">
+      <div class="w-4/6 mx-auto">
+        <div class="home-photo">
+          <div
+            class="hp-inner"
+            style="background-image: url(assets/img/resume-img.jpg)"
+          ></div>
         </div>
-    
-        <div class=" col-span-1">
-            <div class="text-white">
-                <span>web developer</span>
-                <h2 class="text-2xl font-bold">Ehsan Shahrestani</h2>
-                <p class="mb-3">Fusce tempor magna mi, non egestas velit ultricies nec. Aenean convallis, risus non
-                    condimentum gravida,
-                    odio mauris ullamcorper felis, ut venenatis purus ex eu mi. Quisque imperdiet lacinia urna, a placerat
-                    sapien pretium eu.</p>
-    
-                <div class="home-buttons mt-2">
-                    <a (click)="donwloadCv()" class="btn btn-primary">Download CV</a>
-                    <a [routerLink]="['/contact']" class="btn btn-secondary">Contact</a>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-    
- </section>
- 
 
+    <div class="col-span-1">
+      <div class="dark:text-white text-[#222]">
+        <span>Web developer</span>
+        <h2 class="text-2xl font-bold">Ehsan Shahrestani</h2>
+        <p class="mb-3">
+          Experienced full-stack JavaScript developer specialising in creating
+          robust and scalable web applications. Proficient in utilising
+          cutting-edge technologies, including Angular for dynamic front-end
+          development, Nest.js for the backend.
+        </p>
 
+        <div class="home-buttons mt-2">
+          <a (click)="donwloadCv()" class="btn btn-primary">Download CV</a>
+          <a [routerLink]="['/contact']" class="btn btn-secondary">Contact</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- <section class="mt-4">
     <h2 class=" mb-5 relative inline-block pb-2 font-bold text-xl text-white header-line ">What I Do</h2>
