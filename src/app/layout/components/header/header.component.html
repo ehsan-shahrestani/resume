@@ -1,30 +1,78 @@
-<header >
+<header>
+  <div
+    class="flex p-2 items-center border md:border-none  dark:bg-[#222] md:dark:bg-transparent rounded-xl md:rounded-none justify-between"
+  >
+    <div class="flex items-center gap-3">
+      <div
+        class="h-[3rem] text-white text-3xl w-[3rem] rounded-[50%] bg-[#222] font-bold flex items-center justify-center"
+      >
+        E
+      </div>
 
-    <div class="flex bg-[#222]  md:bg-transparent rounded-xl md:rounded-none justify-between">
-
-        <div class="flex items-center gap-3">
-            <div
-                class="h-[3rem]  text-white text-3xl w-[3rem] rounded-[50%] bg-[#222] font-bold flex items-center justify-center ">
-                E
-            </div>
-
-            <h2 class="font-bold hidden md:block text-lg text-[#222] dark:text-white">Ehsan <span class="font-medium">Shahrestani</span></h2>
-
-        </div>
-
-        <div>
-            <app-dark-mode></app-dark-mode>
-            <nav class=" p-4">
-                <ul class="flex space-x-4">
-                    <li *ngFor="let item of headerMenu"><a [routerLink]="[item.route]" routerLinkActive="activeLink"  class="text-gray-400 select-none hover:text-white duration-300 transition-all ">{{item.lable}}</a></li>
-               
-               
-                </ul>
-            </nav>
-
-        </div>
+      <h2 class="font-bold hidden md:block text-lg text-[#222] dark:text-white">
+        Ehsan <span class="font-medium">Shahrestani</span>
+      </h2>
     </div>
 
-
-
+    <div>
+      <nav class="">
+        <ul class="flex space-x-4">
+          <li class="hidden md:block" *ngFor="let item of headerMenu">
+            <a
+              [routerLink]="[item.route]"
+              routerLinkActive="activeLink"
+              class="text-gray-400 select-none hover:text-white duration-300 transition-all"
+              >{{ item.lable }}</a
+            >
+          </li>
+          <li>
+            <app-dark-mode></app-dark-mode>
+          </li>
+          <li class="md:hidden">
+            <label for="my-drawer" class="drawer-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 dark:text-white text-[#222] "
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </label>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 </header>
+
+<div class="drawer">
+  <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content">
+    <!-- Page content here -->
+  </div>
+  <div class="drawer-side">
+    <label
+      for="my-drawer"
+      aria-label="close sidebar"
+      class="drawer-overlay"
+    ></label>
+    <ul class="menu p-4 w-80 min-h-full bg-base-200 dark:bg-[#222] text-base-content dark:text-white">
+      <!-- Sidebar content here -->
+      <li *ngFor="let item of headerMenu">
+          <a
+            [routerLink]="[item.route]"
+            routerLinkActive="activeLink"
+            class="text-gray-400 select-none hover:text-white duration-300 transition-all"
+            >{{ item.lable }}</a
+          >
+      </li>
+    </ul>
+  </div>
+</div>

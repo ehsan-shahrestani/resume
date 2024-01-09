@@ -19,10 +19,8 @@ body,html {
 
 
 .btn-primary,
-.btn-secondary,
-input[type=button],
-input[type=submit],
-.wp-block-button .wp-block-button__link {
+.btn-secondary
+{
     display: inline-block;
     position: relative;
     padding: .8em 2.1em;
@@ -33,9 +31,7 @@ input[type=submit],
     border: 0;
     outline: 0;
     border: 2px solid #222;
-    color: #fff;
     text-shadow: none;
-    background-color: #333;
     border-radius: 30px;
     font-family: poppins, Helvetica, sans-serif;
     -webkit-transition: all .3s ease-in-out;
@@ -43,7 +39,8 @@ input[type=submit],
     -o-transition: all .3s ease-in-out;
     -ms-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
-    box-shadow: 0 10px 10px -8px rgba(0, 0, 0, .78)
+    box-shadow: 0 10px 10px -8px rgba(0, 0, 0, .78);
+    @apply dark:bg-[#222] bg-transparent text-[#222] dark:text-white
 }
 
 .btn-primary:last-child,
