@@ -14,4 +14,11 @@ export class AboutmeComponent {
   constructor(private title :Title){
     this.title.setTitle('Ehsan Sahrestani | About Me')
   }
+  donwloadCv(){
+    let link = document.createElement('a');
+    link.download ="Ehsan_cv.pdf";
+    link.href ='assets/Ali-Safari-Resume.pdf';
+    link.click();
+    window.open('Ehsan_cv.pdf')
+  }
 }

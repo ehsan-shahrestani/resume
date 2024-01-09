@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { ChildrenOutletContexts, NavigationEnd, RouterOutlet } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
-import { slideInAnimation } from '../shared/slide.animation';
+import { fadeInOutAnimation } from '../shared/slide.animation';
 
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss'],
-  animations:[slideInAnimation]
+  animations:[fadeInOutAnimation]
 })
 export class LayoutComponent {
  
