@@ -1,6 +1,6 @@
 <header>
   <div
-    class="flex p-2 items-center border md:border-none  dark:bg-[#222] md:dark:bg-transparent rounded-xl md:rounded-none justify-between"
+    class="flex p-2 items-center border md:border-none dark:bg-[#222] md:dark:bg-transparent rounded-xl md:rounded-none justify-between"
   >
     <div class="flex items-center gap-3">
       <div
@@ -36,7 +36,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="w-6 h-6 dark:text-white text-[#222] "
+                class="w-6 h-6 dark:text-white text-[#222]"
               >
                 <path
                   stroke-linecap="round"
@@ -63,15 +63,17 @@
       aria-label="close sidebar"
       class="drawer-overlay"
     ></label>
-    <ul class="menu p-4 w-80 min-h-full bg-base-200 dark:bg-[#222] text-base-content dark:text-white">
+    <ul
+      class="menu p-4 w-80 min-h-full bg-base-200 dark:bg-[#222] text-base-content dark:text-white"
+    >
       <!-- Sidebar content here -->
       <li *ngFor="let item of headerMenu">
-          <a
-            [routerLink]="[item.route]"
-            routerLinkActive="activeLink"
-            class="text-gray-400 select-none hover:text-white duration-300 transition-all"
-            >{{ item.lable }}</a
-          >
+        <a
+          [routerLink]="[item.route]"
+          routerLinkActive="activeLink"
+          class="text-gray-400 select-none hover:text-white duration-300 transition-all"
+          >{{ item.lable }}</a
+        >
       </li>
     </ul>
   </div>
