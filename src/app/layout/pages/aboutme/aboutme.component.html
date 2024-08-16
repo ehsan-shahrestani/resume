@@ -16,7 +16,9 @@
     <div class="col-span-1">
       <div class="dark:text-white text-[#222]">
         <span>Web developer</span>
-        <h2 class="text-2xl font-bold">Ehsan Shahrestani</h2>
+        <h2 class="text-2xl font-bold">
+          {{ resume()?.attributes?.aboutMe?.fullName }}
+        </h2>
         <p class="mb-3">
           Experienced full-stack JavaScript developer specialising in creating
           robust and scalable web applications. Proficient in utilising

@@ -6,23 +6,48 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: 'aboutMe',
-    pathMatch: 'prefix'
+    pathMatch: 'prefix',
   },
   {
-    path: '', component: LayoutComponent,
+    path: '',
+    component: LayoutComponent,
     children: [
-      { path: 'resume', loadComponent: () => import('./pages/resume/resume.component').then(c => c.ResumeComponent), data: { animation: 'resumePage' } },
-      { path: 'blog', loadComponent: () => import('./pages/blog/blog.component').then(c => c.BlogComponent), data: { animation: 'blogPage' } },
-      { path: 'contact', loadComponent: () => import('./pages/contact/contact.component').then(c => c.ContactComponent), data: { animation: 'contactPage' } },
-      { path: 'aboutMe', loadComponent: () => import('./pages/aboutme/aboutme.component').then(c => c.AboutmeComponent), data: { animation: 'aboutmePage' } },
-    ]
-
+      {
+        path: 'resume',
+        loadComponent: () =>
+          import('./pages/resume/resume.component').then(
+            (c) => c.ResumeComponent
+          ),
+        data: { animation: 'resumePage' },
+      },
+      {
+        path: 'blog',
+        loadComponent: () =>
+          import('./pages/blog/blog.component').then((c) => c.BlogComponent),
+        data: { animation: 'blogPage' },
+      },
+      {
+        path: 'contact',
+        loadComponent: () =>
+          import('./pages/contact/contact.component').then(
+            (c) => c.ContactComponent
+          ),
+        data: { animation: 'contactPage' },
+      },
+      {
+        path: 'aboutMe',
+        loadComponent: () =>
+          import('./pages/aboutme/aboutme.component').then(
+            (c) => c.AboutmeComponent
+          ),
+        data: { animation: 'aboutmePage' },
+      },
+    ],
   },
-
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class LayoutRoutingModule { }
+export class LayoutRoutingModule {}
