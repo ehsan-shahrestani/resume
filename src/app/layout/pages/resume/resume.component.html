@@ -1,30 +1,55 @@
-<h1 class="text-3xl font-bold  text-black  dark:text-white">Resume <small class="font-thin text-sm">2 Years Experience</small></h1>
-
+<h1 class="text-3xl font-bold text-black dark:text-white">
+  Resume <small class="font-thin text-sm">2 Years Experience</small>
+</h1>
 
 <div class="grid grid-cols-1 md:grid-cols-2">
-    <section class="mt-10">
-        <h1 class="font-bold text-xl relative pb-2 header-line inline-block text-black dark:text-white">Experience</h1>
+  <section class="mt-10">
+    <h1
+      class="font-bold text-xl relative pb-2 header-line inline-block text-black dark:text-white"
+    >
+      Experience
+    </h1>
 
-        <div *ngFor="let item of [1,1,1,1,1,1,1,1,1,1,1,1,]" class="mt-5 text-black">
-            <h3 class=" font-bold dark:text-white">Front-end Developer <span
-                    class="font-medium mx-2">2022-2023</span></h3>
-            <p class="dark:text-white font-thin mt-1">Duis posuere, quam non imperdiet egestas, eros enim mattis mauris, in posuere
-                lacus arcu quis felis. Etiam
-                interdum erat non enim venenatis fermentum.
-            </p>
+    <div
+      *ngFor="let item of [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]"
+      class="mt-5 text-black"
+    >
+      <h3 class="font-bold dark:text-white">
+        Front-end Developer <span class="font-medium mx-2">2022-2023</span>
+      </h3>
+      <p class="dark:text-white font-thin mt-1">
+        Duis posuere, quam non imperdiet egestas, eros enim mattis mauris, in
+        posuere lacus arcu quis felis. Etiam interdum erat non enim venenatis
+        fermentum.
+      </p>
+    </div>
+  </section>
+
+  <section class="mt-10">
+    <h1
+      class="font-bold text-xl relative pb-2 header-line inline-block text-black dark:text-white"
+    >
+      Skills
+    </h1>
+
+    <div class="mt-5">
+      <div class="flex flex-wrap gap-3">
+        @for (item of resume()?.attributes?.skills; track $index) {
+        <div
+          class="border space-x-2 px-2 shadow cursor-pointer rounded-md flex items-center justify-center"
+          [style.borderColor]="item.color"
+          [style.Color]="item.color"
+        >
+          <img
+            class="size-4"
+            src="{{ baseUrl + item.icon.data.attributes.url }}"
+            alt=""
+            srcset=""
+          />
+          <p>{{ item.title }}</p>
         </div>
-    </section>
-
-
-    <section class="mt-10">
-        <h1 class="font-bold text-xl relative pb-2 header-line inline-block text-black   dark:text-white">Skills</h1>
-
-        <div class="mt-5">
-                 <div class="flex flex-wrap gap-3">
-                    <h3 class="dark:text-white text-black  font-thin" *ngFor="let item of skills" >{{item}}</h3>        
-
-                 </div>
-            
-        </div>
-    </section>
+        }
+      </div>
+    </div>
+  </section>
 </div>

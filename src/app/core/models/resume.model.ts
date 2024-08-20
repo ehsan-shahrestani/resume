@@ -3,7 +3,7 @@ export interface AboutMe {
   id: number;
   fullName: string;
   jobFiled: string; // Note: "jobFiled" should be "jobField" if it's a typo
-  profileImage: ProfileImage;
+  profileImage: ImageStrapi;
 }
 
 export interface Project {
@@ -19,6 +19,7 @@ export interface Skill {
   id: number;
   title: string;
   color: string;
+  icon: ImageStrapi;
 }
 
 export interface Experience {
@@ -75,7 +76,7 @@ interface ImageFormat {
   url: string;
 }
 
-interface ProfileImage {
+interface ImageStrapi {
   data: {
     id: number;
     attributes: {
