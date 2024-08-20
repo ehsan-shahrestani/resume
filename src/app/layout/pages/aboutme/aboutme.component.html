@@ -5,7 +5,7 @@
     <div class="col-span-1">
       <div class="w-5/6 mx-auto">
         <div appTilt class="home-photo">
-          <div 
+          <div
             class="hp-inner animate-duration-700 animate-fade-right animate-delay-100"
           >
             <img
@@ -27,7 +27,7 @@
       <div
         class="dark:text-white text-[#222] animate-duration-700 animate-fade-left"
       >
-        <span>Web developer</span>
+        <span>{{ resume()?.attributes?.aboutMe?.jobFiled }}</span>
         <h2 class="text-2xl font-bold">
           {{ resume()?.attributes?.aboutMe?.fullName }}
         </h2>
