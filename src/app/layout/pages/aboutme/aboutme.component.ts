@@ -5,6 +5,7 @@ import { Title } from '@angular/platform-browser';
 import { inject } from '@angular/core';
 import { ResumeService } from 'src/app/core/services/resume.service';
 import { effect } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-aboutme',
@@ -16,6 +17,7 @@ import { effect } from '@angular/core';
 export class AboutmeComponent {
   resumeService = inject(ResumeService);
   resume = this.resumeService.resume;
+  baseUrl = environment.apiBaseUrl;
   constructor(private title: Title) {
     effect(() => {
       this.title.setTitle(

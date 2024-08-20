@@ -6,10 +6,19 @@
       <div class="w-5/6 mx-auto">
         <div class="home-photo">
           <div
-            class=" bg-[url({{
-              resume()?.attributes?.aboutMe?.profileImage?.data?.attributes?.url
-            }})] hp-inner animate-duration-700 animate-fade-right animate-delay-100"
-          ></div>
+            class="hp-inner animate-duration-700 animate-fade-right animate-delay-100"
+          >
+            <img
+              class="object-contain"
+              src="{{
+                baseUrl +
+                  resume()?.attributes?.aboutMe?.profileImage?.data?.attributes
+                    ?.url
+              }}"
+              alt=""
+              srcset=""
+            />
+          </div>
         </div>
       </div>
     </div>

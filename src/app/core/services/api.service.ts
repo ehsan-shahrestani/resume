@@ -2,13 +2,13 @@ import { inject, Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ResumeApiResponse, ResumeData } from '../models/resume.model';
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root',
 })
 export class ApiService {
   http = inject(HttpClient);
-  // baseUrl = 'https://ehsan-resume.liara.run/api';
-  baseUrl = 'http://localhost:1337/api';
+  baseUrl = environment.apiBaseUrl + '/api';
   resume = signal<ResumeData | null>(null);
   constructor() {}
 
