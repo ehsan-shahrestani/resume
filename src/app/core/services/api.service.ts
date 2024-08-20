@@ -7,13 +7,15 @@ import { ResumeApiResponse, ResumeData } from '../models/resume.model';
 })
 export class ApiService {
   http = inject(HttpClient);
-  baseUrl = 'https://ehsan-resume.liara.run/api';
+  // baseUrl = 'https://ehsan-resume.liara.run/api';
+  baseUrl = 'http://localhost:1337/api';
   resume = signal<ResumeData | null>(null);
   constructor() {}
 
   getResume(): Observable<ResumeApiResponse> {
     return this.http.get<ResumeApiResponse>(
-      this.baseUrl + '/resume?populate=media'
+      this.baseUrl +
+        '/resume?populate[aboutMe][populate]=*&populate[projects][populate]=*&populate[skills][populate]=*&populate[experience][populate]=*&populate[socialMedia][populate]=*'
     );
   }
 }
