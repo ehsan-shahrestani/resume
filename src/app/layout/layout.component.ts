@@ -6,6 +6,7 @@ import { fadeInOutAnimation } from '../shared/slide.animation';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { OnInit } from '@angular/core';
+import { TiltDirective } from '../core/directives/3dhover';
 
 @Component({
   selector: 'app-layout',
@@ -13,7 +14,7 @@ import { OnInit } from '@angular/core';
   styleUrls: ['./layout.component.scss'],
   animations: [fadeInOutAnimation],
   standalone: true,
-  imports: [HeaderComponent, RouterOutlet, FooterComponent],
+  imports: [HeaderComponent, RouterOutlet, FooterComponent, TiltDirective],
 })
 export class LayoutComponent implements OnInit {
   constructor(private contexts: ChildrenOutletContexts) {}

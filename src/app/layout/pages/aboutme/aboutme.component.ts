@@ -6,11 +6,12 @@ import { inject } from '@angular/core';
 import { ResumeService } from 'src/app/core/services/resume.service';
 import { effect } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { TiltDirective } from 'src/app/core/directives/3dhover';
 
 @Component({
   selector: 'app-aboutme',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, TiltDirective],
   templateUrl: './aboutme.component.html',
   styleUrls: ['./aboutme.component.scss'],
 })

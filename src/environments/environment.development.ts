@@ -1,3 +1,5 @@
 export const environment = {
   apiBaseUrl: 'http://localhost:1337',
+  strapiSecret:
+    '6dc151c16cc4616bc698af01c31a802f8b373957e94a4b5cf0e9b3e63cfdc9dbf772c5a03681cee7d6ad6bea59c643c1da086f50ff87420879e5e70bb63a4ba9c8639c86a0e7e18925a18ee97f6c58eb6fa7a0bd8e4f86e41616b6bf50f38b96a847896651484b3afae621fa196eae39e7acad0047943b8ed3989f3f23467018',
 };
