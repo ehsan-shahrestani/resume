@@ -12,6 +12,8 @@ export class ApiService {
   constructor() {}
 
   getResume(): Observable<ResumeApiResponse> {
-    return this.http.get<ResumeApiResponse>(this.baseUrl + '/resume?populate=*');
+    return this.http.get<ResumeApiResponse>(
+      this.baseUrl + '/resume?populate=media'
+    );
   }
 }

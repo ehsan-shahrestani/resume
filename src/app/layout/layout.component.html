@@ -1,20 +1,31 @@
-<div class="absolute w-full h-full">
+<div
+  class="bg-no-repeat bg-cover fixed bottom-auto top-0 left-0 w-full min-h-full"
+>
   <img
-    src="assets/img/main_bg.png"
-    class=" dark:brightness-100 brightness-0 h-full w-full right-0 object-cover"
+    src="assets/img/bg-dark.svg"
+    class="dark:brightness-100 hidden duration-300 animate-fade dark:inline-block h-dvh w-full right-0 object-cover"
+    alt=""
+    srcset=""
+  />
+
+  <img
+    src="assets/img/bg-light.svg"
+    class="dark:brightness-100 dark:hidden duration-300 animate-fade h-dvh w-full right-0 object-cover"
     alt=""
     srcset=""
   />
 </div>
-<div class="md:flex w-full md:items-center h-full">
+<div class="min-h-full h-full md:flex items-center">
   <div
-    class="bg-gray-500 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 md:border border-[#222] md:dark:border-gray-100 md:overflow-hidden animate-jump-in animate-duration-300 flex flex-col min-h-max  md:h-[90%] py-3 px-2 md:p-20 w-full md:max-w-[1240px] mx-auto md:rounded-[40px]"
+    class="min-h-full md:min-h-max rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 md:border border-[#222] md:dark:border-gray-100 md:overflow-hidden animate-jump-in animate-duration-300 flex flex-col md:h-[90%] py-3 px-2 md:p-20 w-full md:max-w-[1240px] mx-auto md:rounded-[40px]"
   >
     <app-header class="sticky top-0 z-20 left-0"></app-header>
-    <div [@routeAnimations]="getRouteAnimationData()" class=" my-5 md:my-20 flex-1">
+    <div
+      [@routeAnimations]="getRouteAnimationData()"
+      class="my-5 md:my-20 h-vh"
+    >
       <router-outlet></router-outlet>
     </div>
-
     <app-footer></app-footer>
   </div>
 </div>
